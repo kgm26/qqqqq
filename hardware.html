@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>HardWare</title>
+    <style>
+		
+        .font {
+            text-align :center;
+            font-family :monospace;
+        }
+        .banner {
+            position:relative;
+            display:inline-block;
+        }
+        .banner img {
+            max-width:100%;
+            max-height:100%;
+        }
+        .banner span.text {
+            position:absolute;
+            top:50%;
+            left:0;
+            transform:translateY(-50%);
+            display:none;
+            width:100%;
+            font-size:70px;
+            color:#fff;
+            font-weight:900;
+            text-align:center;
+            z-index:2;
+        }
+        .banner::before, .banner::after{
+            content:'';
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:95%;
+            height:95%;
+            transform:translate(-50%,-50%);
+            transition:all .5s;
+        }
+        .banner::before {
+            border-top:2px solid #fff;
+            border-bottom:2px solid #fff;
+            width:0;
+        }
+        .banner::after {
+            border-left:2px solid #fff;
+            border-right:2px solid #fff;
+            height:0;
+        }
+        .banner:hover span.text {display:block;}
+        .banner:hover::before {width:100%;}
+        .banner:hover::after {height:100%;}
+        ul > li > a .banner::after {
+            content:'';
+            display:block;
+            position:absolute;
+            top:50%;
+            left:50%;
+            width: 95%;
+            height:95%;
+            background:rgba(0,0,0,0.3);
+            z-index:1;
+            opacity:0;
+            transition:all .35s;
+        }
+        ul > li > a:hover .banner::after {
+            opacity:1;
+        }
+		ul {font-size:0;}
+		ul > li {
+			display:inline-block;
+			vertical-align:top;
+			width:33.3;
+		}
+		ul > li > a {
+			display:block;
+			width:auto;
+			text-decoration: none;
+			margin:65px;
+		}
+		ul > li > a h3 {
+			font-size:14px;
+			text-align:center;
+			padding:20px;
+			color:#666;
+		}
+        .penguin {
+            text-align: right;
+            margin-top: 125px;
+        }
+	</style>
+</head>
+<body bgcolor="skyblue">
+    
+    <h1 class="font">하드웨어 팀</h1>
+
+	<div class="gallerylist">
+		<ul>
+			<li>
+				<a href="file:///F:/VSCODE.gyumin/HardWare%20Profile.html">
+					<div class="banner">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6viW_SMjJQouRL1e_uUF_LoQqLDLDnXAMGA&usqp=CAU" width="480" height="420">
+						<span class="text">하드웨어 팀<br>프로필</span>
+					</div>
+					<div>
+						<h3>프로필</h3>
+					</div>
+				</a>
+			</li>
+            <li>
+				<a href="file:///F:/VSCODE.gyumin/HardWare%20Introduce.html">
+					<div class="banner">
+						<img src="https://www.sciencetimes.co.kr/wp-content/uploads/2019/10/KVRF-%EA%B3%B5%EC%8B%9D-%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg" width="480" height="420">
+						<span class="text">하드웨어 팀<br>소개</span>
+					</div>
+					<div>
+						<h3>소개</h3>
+					</div>
+				</a>
+			</li>
+            <li>
+				<a href="http://127.0.0.1:5502/Desktop/VSCODE.gyumin/hardWare%20Activity.html">
+					<div class="banner">
+						<img src="https://img.freepik.com/free-photo/businessmen-and-businesswomen-meeting-brainstorming-ideas_7861-3065.jpg?size=626&ext=jpg&ga=GA1.2.1461374684.1685348653&semt=sph" width="480" height="420">
+						<span class="text">하드웨어 팀<br>활동</span>
+					</div>
+					<div>
+						<h3>활동</h3>
+					</div>
+				</a>
+			</li>
+		</ul>
+        <a href="#">
+            <div class="penguin">
+            <img src="https://cdn.discordapp.com/attachments/1105792815558041651/1112651687266623559/IMG_1402.png">
+        </div>
+        </a>
+	</div>
+
+</body>
+</html>
